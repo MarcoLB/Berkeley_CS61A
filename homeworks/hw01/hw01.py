@@ -10,10 +10,11 @@ def a_plus_abs_b(a, b):
     5
     """
     if b < 0:
-        f = _____
+        f = sub
     else:
-        f = _____
+        f = add
     return f(a, b)
+
 
 def two_of_three(a, b, c):
     """Return x*x + y*y, where x and y are the two largest members of the
@@ -28,7 +29,24 @@ def two_of_three(a, b, c):
     >>> two_of_three(5, 5, 5)
     50
     """
-    "*** YOUR CODE HERE ***"
+    return max(x*x+y*y, x*x+z*z, y*y+z*z)
+
+
+def largest_factor(n):
+    """Return the largest factor of n*n-1 that is smaller than n.
+
+    >>> largest_factor(4) # n*n-1 is 15; factors are 1, 3, 5, 15
+    3
+    >>> largest_factor(9) # n*n-1 is 80; factors are 1, 2, 4, 5, 8, 10, ...
+    8
+    """
+    m = n*n-1 
+    while Ture:
+        if(m mod n != 0):
+            n--
+        else:
+            return n
+
 
 def if_function(condition, true_result, false_result):
     """Return true_result if condition is a true value, and
@@ -70,6 +88,7 @@ def t():
 def f():
     "*** YOUR CODE HERE ***"
 
+
 def hailstone(n):
     """Print the hailstone sequence starting at n and return its
     length.
@@ -85,10 +104,20 @@ def hailstone(n):
     >>> a
     7
     """
-    "*** YOUR CODE HERE ***"
+    long = 1
+    while n != 1:
+        print(n)
+        if n mod 2 == 0:
+            n /= 2
+        else:
+            n = 3n + 1
+        long++
+    print(n)
+    return n
+
+
 
 challenge_question_program = """
 "*** YOUR CODE HERE ***"
 """
-
 
